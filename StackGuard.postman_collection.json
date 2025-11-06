@@ -1,0 +1,163 @@
+{
+  "info": {
+    "name": "StackGuard API",
+    "_postman_id": "stackguard-collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/health",
+          "host": [
+            "http://localhost:5000"
+          ],
+          "path": [
+            "api",
+            "health"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Register",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\": \"test@example.com\", \"password\": \"password123\"}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auth/register",
+          "host": [
+            "http://localhost:5000"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "register"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\": \"test@example.com\", \"password\": \"password123\"}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auth/login",
+          "host": [
+            "http://localhost:5000"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Me",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/user/me",
+          "host": [
+            "http://localhost:5000"
+          ],
+          "path": [
+            "api",
+            "user",
+            "me"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Set Config",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"configKey\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\"}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/user/config",
+          "host": [
+            "http://localhost:5000"
+          ],
+          "path": [
+            "api",
+            "user",
+            "config"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Private Check",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/user/private-check",
+          "host": [
+            "http://localhost:5000"
+          ],
+          "path": [
+            "api",
+            "user",
+            "private-check"
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "token",
+      "value": ""
+    }
+  ]
+}
