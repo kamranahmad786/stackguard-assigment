@@ -25,6 +25,10 @@ Open http://localhost:5173
 cd server
 npm run seed -- --email demo@stackguard.dev --password password123 --configured --key "$(node -e 'console.log("x".repeat(120))')"
 ```
+Deploy link 
+
+https://stackguard-assigment.vercel.app/login
+
 
 ## Deploy
 - **Backend**: Heroku (Procfile) / Render (render.yaml)
